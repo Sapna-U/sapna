@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* Colors */
+:root {
+  --background: #f1f5f9;
+  --foreground: #1e293b;
+}
+
+/* Reset */
+* {
+  margin: 4;
+  padding: 6;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #0a0a0a;
+}
+
+p, li {
+  line-height: 1.7;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* List fix */
+ul {
+  list-style-position: inside;
+}
+
+/* IMPORTANT: remove global section hover (it breaks spacing) */
+section {
+  transition: transform 0.3s ease;
+}
+
+/* Use class-based hover instead of all sections */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+/* ========================= */
+/* HERO ANIMATIONS */
+/* ========================= */
+
+@keyframes zoomImage {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomText {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 20px rgba(255,255,255,0.5);
+  }
+
+  50% {
+    box-shadow:
+      0 0 50px rgba(255,255,255,0.9),
+      0 0 90px rgba(236,72,153,0.7),
+      0 0 120px rgba(59,130,246,0.6);
+  }
+
+  100% {
+    box-shadow:
+      0 0 20px rgba(255,255,255,0.5);
+  }
+}
+
+@keyframes lineFill {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating Background Glow */
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

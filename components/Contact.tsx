@@ -2,59 +2,59 @@ import { resume } from "@/data/resume";
 
 export default function Contact() {
   return (
-    <section className="bg-[#C57FF0] rounded-[28px] shadow-lg p-10">
-      <h2 className="text-3xl font-bold mb-4">Contact</h2>
+    <section className="bg-[#C57FF0] rounded-[28px] shadow-lg p-6 md:p-10">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        Contact
+      </h2>
 
-      <div className="space-y-3 text-lg">
-        {/* Email */}
-        <p>
-          📧{" "}
+      <div className="space-y-5 text-base md:text-lg">
+
+        <div className="flex items-start gap-3">
+          <span>📧</span>
           <a
             href={`mailto:${resume.email}`}
-            className="text-blue-600 hover:underline"
+            className="text-blue-700 break-all hover:underline"
           >
             {resume.email}
           </a>
-        </p>
+        </div>
 
-        {/* Phone */}
-        <p>
-          📱{" "}
+        <div className="flex items-start gap-3">
+          <span>📱</span>
           <a
             href={`tel:${resume.phone}`}
-            className="text-blue-600 hover:underline"
+            className="text-blue-700 hover:underline"
           >
             {resume.phone}
           </a>
-        </p>
+        </div>
 
-        {/* Location */}
-        <p>
-          📍{" "}
+        <div className="flex items-start gap-3">
+          <span>📍</span>
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
               resume.location
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="text-blue-700 hover:underline break-words"
           >
             {resume.location}
           </a>
-        </p>
+        </div>
 
-        {/* LinkedIn */}
-        <p>
-          💼{" "}
+        <div className="flex items-start gap-3">
+          <span>💼</span>
           <a
             href={resume.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="text-blue-700 break-all hover:underline"
           >
-            https://www.linkedin.com/in/sapna-u-it
+            LinkedIn Profile
           </a>
-        </p>
+        </div>
+
       </div>
     </section>
   );
